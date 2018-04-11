@@ -4,7 +4,7 @@
 This project is a ASP.NET project
 Written for our school to combat
 1st year students from missing
-Their college introduction classes
+their college introduction classes
 
 
 # Authors:
