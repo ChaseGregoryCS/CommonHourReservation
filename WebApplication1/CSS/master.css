@@ -1,0 +1,50 @@
+﻿@charset "UTF-8";
+/* Master CSS Document */
+.container {
+		max-width: 1000px;	
+}
+.jumbotron {
+	background-image: url("Images/header-rev.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: bottom, center;
+	background-color: #bb131a;
+	min-height: 150px;
+}	
+h1 {
+	color: #bb131a;	
+}
+.form-group {
+	max-width: 50%;	
+}
+@media (max-width: 600px) {
+	.jumbotron {
+		min-height: 80px;
+  	}
+}
+@media (max-width: 768px) {
+	.jumbotron {
+		min-height: 80px;
+  	}
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+  	/* Margin bottom by footer height */
+  	margin-bottom: 60px;
+}
+.footer {
+  	position: absolute;
+ 	 bottom: 0;
+ 	 width: 100%;
+ 	 /* Set the fixed height of the footer here */
+ 	 height: 60px;
+ 	 background-color: #bb131a;
+	 color: #ffffff;
+}
+

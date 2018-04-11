@@ -1,0 +1,51 @@
+<%@ Master CodeBehind="masterPage.master.cs" Inherits="CHR.masterPage" Language="C#" AutoEventWireup="True" %>
+<%@ Import Namespace="System.Web.Security" %>
+<!DOCTYPE html>
+
+<html>
+	<head>
+	<title>
+	EU Common Hour Reservation
+	</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+	crossorigin="anonymous">
+	<link href="CSS/master.css" rel="stylesheet">
+    	  
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+	crossorigin="anonymous"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    </head>
+    
+    <body role="document">
+        <form runat="server">
+    	<div class="container">
+            <div style="text-align: right">
+                <asp:Label ID="lblWelcome" runat="server" />
+                <asp:Button ID="btnLogout" Text="Logout" OnClick="btnLogout_Click" Visible="false" runat="server" class="btn btn-danger"/>
+            </div>
+    		<nav class="navbar navbar-default">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav">
+						<li><a href="Default.aspx"><asp:Literal ID="litHome" runat="server" Text="Home" Visible='<%# !CHR.Users.isAdmin(Page.User.Identity.Name) %>'/></a></li>
+						<li><a href="studentDetails.aspx"><asp:Literal ID="litStuInfo" runat="server" Text="Student Info" Visible='<%# !CHR.Users.isAdmin(Page.User.Identity.Name) %>'/></a></li>
+						<li><a href="adminLogin.aspx">Admin Portal</a></li>
+					 </ul>
+				</div>
+			</nav>
+            
+    		<div class="jumbotron">
+     		</div>
+            <asp:ContentPlaceholder id="CPH1" runat="server">
+            </asp:ContentPlaceholder>
+  	        </div>
+            <footer class="footer">
+      			<div class="container">
+      				<br>Made with &hearts; at Edinboro University. 
+    			</div>
+    		</footer>
+            </form>
+    </body>
+</html>
