@@ -12,5 +12,6 @@ Sara Sheehan,
 Cory Wilson, 
 Jeremy Core,
 Ashley Kemick,
-Chase Gregory
+Chase Gregory,
+Kyle Grygo
 
